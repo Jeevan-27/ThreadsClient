@@ -38,7 +38,7 @@ const PostWidget = ({
   const [totalComments, setTotalComments] = useState(comments.length);
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:6001/posts/${postId}/like`, {
+    const response = await fetch(`https://threads-app-two-flame.vercel.app/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -84,7 +84,7 @@ const PostWidget = ({
       {picturePath && (
         <Box mt="0.75rem">
           <img
-            src={`http://localhost:6001/assets/${picturePath}`}
+            src={`https://threads-app-two-flame.vercel.app/assets/${picturePath}`}
             alt="post"
             style={{
               borderRadius: "0.5rem",
