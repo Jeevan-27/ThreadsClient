@@ -148,7 +148,7 @@ const Navbar = () => {
   const searchUsers = async (searchQuery) => {
     try {
       const response = await fetch(
-        `http://localhost:6001/search?query=${searchQuery}`,
+        `https://threads-app-two-flame.vercel.app/search?query=${searchQuery}`,
         {
           method: "GET",
           headers: {
