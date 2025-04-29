@@ -24,7 +24,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const main = palette.neutral.main;
 
   const getUser = async () => {
-    const response = await fetch(`http://localhost:6001/users/${userId}`, {
+    const response = await fetch(`https://threads-app-two-flame.vercel.app/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -46,7 +46,7 @@ const UserWidget = ({ userId, picturePath }) => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`http://localhost:6001/save/${userId}`, {
+    const response = await fetch(`https://threads-app-two-flame.vercel.app/save/${userId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
